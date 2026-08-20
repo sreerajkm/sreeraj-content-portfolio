@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreeraj K M — Content Strategist & Technical Content Writer</title>
+  <meta name="description" content="Sreeraj K M is a Content Strategist and Technical Content Writer specializing in SEO, content strategy, technical writing, website content and modern search.">
+  <meta name="theme-color" content="#0B1F33">
+  <meta property="og:title" content="Sreeraj K M — Content Strategist">
+  <meta property="og:description" content="Content strategy. Clear thinking. Better content.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0B1F33; --cream:#F8F7F3; --charcoal:#1F2933; --terra:#B65F4A;
+      --muted:#66717d; --line:rgba(11,31,51,.13); --white:#fff;
+      --max:1180px; --shadow:0 18px 60px rgba(11,31,51,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .eyebrow{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+    .serif{font-family:"Playfair Display",serif}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border:1px solid var(--navy);font-weight:700;font-size:.9rem;transition:.25s ease}
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-primary:hover{background:var(--terra);border-color:var(--terra);transform:translateY(-2px)}
+    .btn-outline{background:transparent;color:var(--navy)}
+    .btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+    .btn-terra{background:var(--terra);border-color:var(--terra);color:#fff}
+    .btn-terra:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-2px)}
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(248,247,243,.9);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.25s}
+    header.scrolled{border-color:var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:-.02em;color:var(--navy);font-size:1.05rem}
+    .navlinks{display:flex;align-items:center;gap:26px;font-size:.88rem;font-weight:600}
+    .navlinks a{position:relative}
+    .navlinks a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--terra);transition:.25s}
+    .navlinks a:hover:after,.navlinks a.active:after{width:100%}
+    .menu{display:none;border:0;background:none;font-size:1.5rem;color:var(--navy)}
+    section{padding:110px 0}
+    #home{padding-top:145px;min-height:92vh;display:flex;align-items:center}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+    .hero h1{font-size:clamp(3.4rem,7vw,6.6rem);line-height:.98;letter-spacing:-.055em;color:var(--navy);margin:18px 0 24px}
+    .hero h1 em{color:var(--terra);font-style:normal}
+    .hero-copy{max-width:680px;font-size:1.13rem;color:#4d5965}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+    .hero-meta strong{display:block;color:var(--navy);font-size:1.25rem}
+    .hero-meta span{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .portrait-wrap{position:relative}
+    .portrait-wrap:before{content:"";position:absolute;inset:28px -20px -22px 20px;background:var(--navy);z-index:0}
+    .portrait{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:saturate(.94)}
+    .portrait-tag{position:absolute;z-index:2;left:-24px;bottom:28px;background:var(--terra);color:#fff;padding:14px 18px;font-weight:700;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase}
+    .intro-band{background:var(--navy);color:#fff;padding:30px 0}
+    .intro-band .container{display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .intro-band p{font-size:1.05rem;max-width:780px;color:#e8edf2}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
+    .section-head h2{font-size:clamp(2.3rem,4vw,4rem);line-height:1.05;color:var(--navy);letter-spacing:-.04em;margin-top:10px}
+    .section-head p{max-width:430px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}
+    .about-copy{font-size:1.08rem;color:#46515d}
+    .about-copy p+p{margin-top:18px}
+    .pullquote{border-left:3px solid var(--terra);padding:18px 0 18px 24px;margin-top:28px;color:var(--navy);font-size:1.35rem;font-family:"Playfair Display",serif}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .mini-card{background:var(--cream);padding:25px}
+    .mini-card strong{display:block;color:var(--navy);font-size:1.7rem}
+    .mini-card span{font-size:.78rem;color:var(--muted)}
+    .expertise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .expertise-card{border:1px solid var(--line);padding:30px;background:rgba(255,255,255,.28);transition:.25s}
+    .expertise-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);background:#fff}
+    .expertise-card .num{font-size:.75rem;color:var(--terra);font-weight:800;letter-spacing:.12em}
+    .expertise-card h3{color:var(--navy);font-size:1.35rem;margin:12px 0}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{border:1px solid var(--line);padding:5px 9px;font-size:.76rem;color:#52606d;background:rgba(255,255,255,.35)}
+    .tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .tool{padding:10px 14px;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:.82rem;font-weight:600}
+    .work-grid{display:grid;gap:22px}
+    .case{border:1px solid var(--line);background:#fff;padding:34px;display:grid;grid-template-columns:.35fr 1fr;gap:35px;transition:.25s}
+    .case:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+    .case-number{font-family:"Playfair Display",serif;font-size:4rem;color:rgba(11,31,51,.12);line-height:1}
+    .case h3{font-size:1.8rem;line-height:1.15;color:var(--navy);margin:7px 0 8px}
+    .case .meta{color:var(--terra);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+    .case p{color:#55616c}
+    .case-details{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+    .detail h4{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);margin-bottom:7px}
+    .detail p{font-size:.9rem}
+    .case-link{display:inline-flex;margin-top:22px;color:var(--terra);font-weight:800}
+    .confidential{margin-top:22px;padding:26px;background:var(--navy);color:#fff}
+    .confidential h3{font-family:"Playfair Display",serif;font-size:1.7rem}
+    .confidential p{color:#dce4eb;margin-top:6px}
+    .timeline{position:relative;margin-top:20px}
+    .timeline:before{content:"";position:absolute;left:104px;top:0;bottom:0;width:1px;background:var(--line)}
+    .timeline-item{display:grid;grid-template-columns:160px 1fr;gap:45px;position:relative;padding:0 0 55px}
+    .timeline-item:before{content:"";position:absolute;left:99px;top:5px;width:11px;height:11px;border:3px solid var(--cream);background:var(--terra);box-shadow:0 0 0 1px var(--terra)}
+    .date{font-weight:800;color:var(--navy);font-size:.9rem}
+    .role h3{font-size:1.5rem;color:var(--navy)}
+    .role .company{color:var(--terra);font-weight:700}
+    .role ul{margin-top:10px;padding-left:18px;color:#58636e}
+    .leadership{margin-top:20px;background:var(--navy);color:#fff;padding:45px;display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
+    .leadership h3{font-family:"Playfair Display",serif;font-size:2.5rem;line-height:1.05}
+    .leadership .big{font-size:3.8rem;color:var(--terra);font-weight:800;line-height:1}
+    .leadership p{color:#dbe3ea}
+    .flow{display:flex;gap:0;margin-top:24px;flex-wrap:wrap}
+    .flow span{padding:11px 15px;border:1px solid rgba(255,255,255,.18);font-size:.8rem}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stat{padding:34px 20px;border-right:1px solid var(--line)}
+    .stat:last-child{border-right:0}
+    .stat strong{font-family:"Playfair Display",serif;font-size:2.8rem;color:var(--navy);display:block;line-height:1}
+    .stat span{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .service{background:var(--cream);padding:30px}
+    .service h3{color:var(--navy);font-size:1.2rem;margin-bottom:7px}
+    .service p{color:var(--muted);font-size:.92rem}
+    .brands{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+    .brand-pill{border:1px solid var(--line);padding:12px 16px;font-weight:700;color:var(--navy);background:#fff}
+    .quote-note{border:1px dashed var(--line);padding:22px;color:var(--muted);font-size:.9rem;margin-top:25px}
+    .contact{background:var(--navy);color:#fff}
+    .contact .section-head h2{color:#fff}
+    .contact .section-head p{color:#cbd5df}
+    .contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:start}
+    .contact-copy{font-size:1.1rem;color:#dbe3ea;max-width:600px}
+    .contact-list{display:grid;gap:13px;margin-top:26px}
+    .contact-item{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(255,255,255,.15);padding:13px 0}
+    .contact-item span{color:#aebbc7;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+    .contact-item a{font-weight:700}
+    .availability{display:inline-flex;align-items:center;gap:8px;margin-top:25px;padding:8px 11px;border:1px solid rgba(255,255,255,.16);font-size:.8rem}
+    .dot{width:8px;height:8px;background:#6abf69;border-radius:50%}
+    footer{background:#071624;color:#b7c2cc;padding:25px 0}
+    footer .container{display:flex;justify-content:space-between;gap:20px;font-size:.8rem}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){
+      .navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+      .navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}
+      .hero,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{gap:50px}
+      .portrait-wrap{max-width:520px;margin:auto}.intro-band .container{display:block}
+      .intro-band .btn{margin-top:18px}.case{grid-template-columns:1fr}.case-details{grid-template-columns:1fr}
+      .timeline:before{left:7px}.timeline-item{grid-template-columns:1fr;gap:10px;padding-left:35px}.timeline-item:before{left:1px}
+      .leadership{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}
+    }
+    @media(max-width:600px){
+      section{padding:80px 0}.container{width:min(var(--max),calc(100% - 28px))}
+      #home{padding-top:115px}.hero h1{font-size:3.2rem}.hero-copy{font-size:1rem}
+      .hero-meta{gap:18px}.expertise-grid,.services{grid-template-columns:1fr}.case{padding:24px}.leadership{padding:30px}
+      .leadership h3{font-size:2rem}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}
+      .stat:last-child{border-bottom:0}.section-head{display:block}.section-head p{margin-top:15px}
+      footer .container{display:block}.footer-links{margin-top:8px}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Sreeraj K M",
+    "jobTitle":"Content Strategist",
+    "url":"",
+    "email":"mailto:sreerajmdas13@gmail.com",
+    "sameAs":["https://www.linkedin.com/in/sreeraj-k-m-26698b199/"],
+    "knowsAbout":["Content Strategy","SEO","Technical Writing","Content Marketing","AEO","GEO"]
+  }
+  </script>
+</head>
+<body>
+<header id="header">
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">Sreeraj K M</a>
+      <div class="navlinks" id="navlinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#expertise">Expertise</a>
+        <a href="#work">Work</a><a href="#experience">Experience</a><a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-terra nav-cta" href="#contact">Let's Talk →</a>
+      <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="home">
+  <div class="container hero">
+    <div class="reveal">
+      <div class="eyebrow">Content Strategist · SEO · Technical Content</div>
+      <h1>Content Strategy.<br><em>Clear Thinking.</em><br>Better Content.</h1>
+      <p class="hero-copy">I turn complex ideas into clear, SEO-driven, high-performing content across technology, products, and digital experiences.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">Explore My Work →</a>
+        <a class="btn btn-outline" href="assets/Sreeraj-K-M-Resume.pdf" download>Download Resume</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>3+</strong><span>Years experience</span></div>
+        <div><strong>300+</strong><span>SEO articles</span></div>
+        <div><strong>80%</strong><span>Organic traffic growth</span></div>
+        <div><strong>3–4</strong><span>Writers guided</span></div>
+      </div>
+    </div>
+    <div class="portrait-wrap reveal">
+      <img class="portrait" src="assets/sreeraj-km.jpg" alt="Professional portrait of Sreeraj K M">
+      <div class="portrait-tag">Strategy · Search · Storytelling</div>
+    </div>
+  </div>
+</section>
+
+<div class="intro-band">
+  <div class="container">
+    <p><strong>I don't just deliver documents.</strong> I build content systems tied to audience needs, search behaviour, product positioning and business outcomes.</p>
+    <a class="btn btn-terra" href="#about">Get to know me →</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">About</div><h2>Strategy behind<br>the words.</h2></div>
+      <p>Content that is useful to people, discoverable in search and accountable to outcomes.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>I'm a detail-oriented Content Strategist & SEO Writer with 3+ years of experience creating content that informs, engages, and converts — blending creativity with strategy to turn complex ideas and business objectives into clear, compelling digital experiences.</p>
+        <p>My path ran through classrooms, travel desks, and product teams: simplifying K–12 curriculum at Uolo, competing in crowded travel SERPs at AKVM, and now owning content strategy end to end for an OEM technology platform.</p>
+        <p>Whether it's a blog, solution page, landing page, or campaign, my goal is content that resonates with the right audience while supporting meaningful business outcomes.</p>
+        <div class="pullquote">“Sreeraj is someone who turns complex ideas into clear, strategic content that performs.”</div>
+      </div>
+      <div class="mini-grid reveal">
+        <div class="mini-card"><strong>SEO</strong><span>Search intent · research · optimization</span></div>
+        <div class="mini-card"><strong>Strategy</strong><span>Planning · journeys · editorial systems</span></div>
+        <div class="mini-card"><strong>Technical</strong><span>Products · documentation · IoT</span></div>
+        <div class="mini-card"><strong>Storytelling</strong><span>Copy · blogs · thought leadership</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Expertise</div><h2>What I bring<br>to the table.</h2></div>
+      <p>A practical mix of strategy, search, technical understanding and writing craft.</p>
+    </div>
+    <div class="expertise-grid">
+      <article class="expertise-card reveal"><div class="num">01</div><h3>Content Strategy</h3><div class="tags"><span class="tag">Content planning</span><span class="tag">Editorial strategy</span><span class="tag">Content calendars</span><span class="tag">Audience research</span><span class="tag">Content journeys</span></div></article>
+      <article class="expertise-card reveal"><div class="num">02</div><h3>SEO & Search</h3><div class="tags"><span class="tag">Keyword research</span><span class="tag">Search intent</span><span class="tag">Competitor research</span><span class="tag">Content gaps</span><span class="tag">On-page SEO</span></div></article>
+      <article class="expertise-card reveal"><div class="num">03</div><h3>Technical Content</h3><div class="tags"><span class="tag">Technical writing</span><span class="tag">Documentation</span><span class="tag">Knowledge bases</span><span class="tag">IoT</span><span class="tag">Technology explainers</span></div></article>
+      <article class="expertise-card reveal"><div class="num">04</div><h3>Content & Copy</h3><div class="tags"><span class="tag">SEO blogs</span><span class="tag">Website copy</span><span class="tag">Landing pages</span><span class="tag">Product pages</span><span class="tag">Thought leadership</span></div></article>
+      <article class="expertise-card reveal"><div class="num">05</div><h3>Modern Search</h3><div class="tags"><span class="tag">AEO</span><span class="tag">GEO</span><span class="tag">E-E-A-T</span><span class="tag">AI-assisted workflows</span><span class="tag">Content repurposing</span></div></article>
+      <article class="expertise-card reveal"><div class="num">06</div><h3>Research & Performance</h3><div class="tags"><span class="tag">Content audits</span><span class="tag">Performance analysis</span><span class="tag">Conversion content</span><span class="tag">Audience behaviour</span></div></article>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow" style="margin-top:45px">Tools</div>
+      <div class="tools">
+        <span class="tool">Google Search Console</span><span class="tool">Google Analytics</span><span class="tool">Ahrefs</span><span class="tool">Semrush</span>
+        <span class="tool">ChatGPT</span><span class="tool">Claude</span><span class="tool">Grammarly</span><span class="tool">WordPress</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Selected Work</div><h2>Strategy, search,<br>storytelling.</h2></div>
+      <p>Selected case studies across technology, travel and digital content.</p>
+    </div>
+    <div class="work-grid">
+      <article class="case reveal">
+        <div><div class="case-number">01</div><div class="meta">Technology · OEM · IoT</div></div>
+        <div>
+          <h3>OEM Platform Content Strategy & SEO</h3>
+          <p><strong>MoMAGIC Technologies Pvt. Ltd.</strong> — Content Strategist & Content Writer</p>
+          <div class="case-details">
+            <div class="detail"><h4>Challenge</h4><p>The OEM platform needed structured, SEO-focused content to clearly communicate products, services, solutions and business value.</p></div>
+            <div class="detail"><h4>Approach</h4><p>Keyword and search-intent research, product and audience research, content planning, SEO optimization and cross-functional collaboration.</p></div>
+            <div class="detail"><h4>Content</h4><p>Product pages, website pages, service pages, blogs, product descriptions, documentation, knowledge-base and marketing content.</p></div>
+            <div class="detail"><h4>Outcome</h4><p>Improved content clarity, SEO structure, consistency, product communication and organic visibility.</p></div>
+          </div>
+          <a class="case-link" href="https://www.momagic.com/" target="_blank" rel="noopener">View company website ↗</a>
+        </div>
+      </article>
+      <article class="case reveal">
+        <div><div class="case-number">02</div><div class="meta">Technology · IoT · AdTech</div></div>
+        <div>
+          <h3>Technical Product Documentation</h3>
+          <p><strong>MoMAGIC Technologies Pvt. Ltd.</strong> — Technical Content Writer / Content Strategist</p>
+          <div class="case-details">
+            <div class="detail"><h4>Challenge</h4><p>Complex technology products needed to be communicated clearly to both technical and business audiences.</p></div>
+            <div class="detail"><h4>Approach</h4><p>Simplified technical concepts, organized information by user intent and maintained consistency in product terminology and messaging.</p></div>
+            <div class="detail"><h4>Content</h4><p>Product documentation, knowledge-base articles, technical explainers, product descriptions and supporting website content.</p></div>
+            <div class="detail"><h4>Outcome</h4><p>More structured, readable and accessible product information supporting communication and SEO.</p></div>
+          </div>
+          <a class="case-link" href="https://www.momagic.com/index.php/smart-iot-platform/" target="_blank" rel="noopener">View platform ↗</a>
+        </div>
+      </article>
+      <article class="case reveal">
+        <div><div class="case-number">03</div><div class="meta">Travel · SEO · Tourism</div></div>
+        <div>
+          <h3>Travel SEO Content & Destination Guides</h3>
+          <p><strong>AKVM Solutions Pvt. Ltd.</strong> — Travel Content Writer</p>
+          <div class="case-details">
+            <div class="detail"><h4>Challenge</h4><p>Create useful, search-focused travel content that attracts organic users while providing practical information.</p></div>
+            <div class="detail"><h4>Approach</h4><p>Destination research, keyword and search-intent research, competitor analysis and traveller-focused content development.</p></div>
+            <div class="detail"><h4>Content</h4><p>Destination guides, travel blogs, itineraries, attraction guides and travel information.</p></div>
+            <div class="detail"><h4>Outcome</h4><p>SEO-focused content designed to improve organic visibility, engagement and usefulness for travellers.</p></div>
+          </div>
+          <a class="case-link" href="https://akvmsolutions.com/" target="_blank" rel="noopener">View company website ↗</a>
+        </div>
+      </article>
+    </div>
+    <div class="confidential reveal">
+      <h3>Some work stays confidential.</h3>
+      <p>Much of my professional work is covered by confidentiality agreements. Where work cannot be publicly displayed, I showcase anonymized case studies focused on the problem, strategy, content approach and outcomes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Experience</div><h2>A career built<br>around content.</h2></div>
+      <p>From education and travel content to end-to-end content strategy for technology platforms.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal"><div class="date">Jan 2025 — Present</div><div class="role"><h3>Content Strategist</h3><div class="company">MoMAGIC Technologies Pvt. Ltd.</div><ul><li>Develop and execute content strategies aligned with business goals, user needs and product positioning.</li><li>Create and optimize SEO-focused product pages, blogs, documentation and knowledge-base content.</li><li>Collaborate with product, marketing and design teams and guide 3–4 writers.</li></ul></div></div>
+      <div class="timeline-item reveal"><div class="date">Dec 2023 — Aug 2024</div><div class="role"><h3>Content Writer</h3><div class="company">AKVM Solutions Pvt. Ltd.</div><ul><li>Created SEO-focused travel content and researched keywords, competitors and search intent.</li><li>Collaborated with marketing, design and product teams to align content with business objectives.</li></ul></div></div>
+      <div class="timeline-item reveal"><div class="date">Jul 2023 — Dec 2023</div><div class="role"><h3>Coding Content Developer</h3><div class="company">Uolo EdTech Pvt. Ltd.</div><ul><li>Created educational content tailored for K–12 students.</li><li>Developed accessible learning content using interactive elements and modern teaching approaches.</li></ul></div></div>
+    </div>
+    <div class="leadership reveal">
+      <div><div class="big">3–4</div><h3>Writers guided.<br>Content quality owned.</h3></div>
+      <div><p>Provided content briefs, assigned topics, reviewed drafts, shared SEO and content guidelines, and gave editorial feedback to maintain quality, consistency and search intent.</p><div class="flow"><span>Brief</span><span>Assign</span><span>Review</span><span>Optimize</span><span>Publish</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal"><div><div class="eyebrow">Impact</div><h2>Content with<br>something to prove.</h2></div><p>Selected metrics supplied for the portfolio. Keep only figures that can be substantiated in interviews.</p></div>
+    <div class="stats">
+      <div class="stat reveal"><strong data-count="80">0%</strong><span>Organic traffic growth</span></div>
+      <div class="stat reveal"><strong data-count="300">0+</strong><span>SEO articles published</span></div>
+      <div class="stat reveal"><strong>5 → 1</strong><span>Keyword ranking improvement</span></div>
+      <div class="stat reveal"><strong>3–4</strong><span>Writers guided</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Services</div><h2>How I can<br>help.</h2></div>
+      <p>Strategy and execution for brands that need content to do more than fill a page.</p>
+    </div>
+    <div class="services">
+      <div class="service reveal"><h3>Content Strategy</h3><p>Content plans around business goals, audience needs, search behaviour and product positioning.</p></div>
+      <div class="service reveal"><h3>SEO Content</h3><p>Search-focused content built around intent, relevance, structure and discoverability.</p></div>
+      <div class="service reveal"><h3>Technical Writing</h3><p>Clear, useful content for complex products, technology and technical concepts.</p></div>
+      <div class="service reveal"><h3>Website & Product Content</h3><p>Product pages, service pages, website messaging and digital experiences.</p></div>
+      <div class="service reveal"><h3>AEO / GEO</h3><p>Content structured for modern search experiences and AI-driven discovery.</p></div>
+      <div class="service reveal"><h3>Copywriting</h3><p>Landing pages, promotional content and conversion-focused messaging.</p></div>
+      <div class="service reveal"><h3>Thought Leadership</h3><p>Strategic LinkedIn and thought-leadership content that builds authority.</p></div>
+      <div class="service reveal"><h3>Script Writing</h3><p>Clear, audience-focused scripts for video and digital storytelling.</p></div>
+    </div>
+    <div class="reveal" style="margin-top:45px">
+      <div class="eyebrow">Education</div>
+      <div class="brands"><span class="brand-pill">MCA · K. R. Mangalam University</span><span class="brand-pill">BCA · Jamia Hamdard University</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Contact</div><h2>Have a content challenge?<br>Let's make it work.</h2></div>
+      <p>Content strategy, SEO, technical writing, and ideas that turn into results.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-copy">If you're looking for a content professional who can move from research and strategy to writing, optimization and editorial execution, let's connect.</p>
+        <div class="availability"><span class="dot"></span> Open to relevant opportunities</div>
+      </div>
+      <div class="reveal">
+        <div class="contact-list">
+          <div class="contact-item"><span>Email</span><a href="mailto:sreerajmdas13@gmail.com">sreerajmdas13@gmail.com</a></div>
+          <div class="contact-item"><span>WhatsApp</span><a href="https://wa.me/919599349899" target="_blank" rel="noopener">+91 9599349899</a></div>
+          <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/sreeraj-k-m-26698b199/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+          <a class="btn btn-terra" href="mailto:sreerajmdas13@gmail.com">Let's Talk →</a>
+          <a class="btn" style="border-color:#fff;color:#fff" href="assets/Sreeraj-K-M-Resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Sreeraj K M</div>
+    <div class="footer-links">Content Strategy · SEO · Technical Writing · Storytelling</div>
+  </div>
+</footer>
+
+<script>
+  const header=document.getElementById('header');
+  const menu=document.getElementById('menu');
+  const nav=document.getElementById('navlinks');
+  window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20));
+  menu.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  const countObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      const el=entry.target, target=Number(el.dataset.count);
+      let start=0, duration=900, startTime=null;
+      const tick=t=>{
+        if(!startTime)startTime=t;
+        const p=Math.min((t-startTime)/duration,1);
+        el.textContent=Math.floor(p*target)+(target===80?'%':'+');
+        if(p<1)requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick); countObserver.unobserve(el);
+    });
+  },{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>countObserver.observe(el));
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
